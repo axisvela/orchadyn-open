@@ -1,0 +1,13 @@
+{
+  "goal": {
+    "id": "approve-purchase-order",
+    "owner": "procurement-director",
+    "outcome": "purchase_order_approved",
+    "deadline": "2026-08-31T00:00:00Z"
+  },
+  "constraints": [
+    { "kind": "budget", "hard": true, "predicate": "amount <= 100000" },
+    { "kind": "segregation_of_duties", "hard": true, "predicate": "requester != approver" }
+  ],
+  "projectionTarget": "rheovela"
+}

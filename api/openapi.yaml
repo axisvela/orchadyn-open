@@ -1,0 +1,48 @@
+openapi: 3.1.0
+info:
+  title: ORCHADYN Planning API
+  version: 0.1.0
+  description: Public contract for compiling and verifying capability plans.
+paths:
+  /healthz:
+    get:
+      summary: Check service health
+      responses:
+        '200':
+          description: Service is ready
+  /plans:generate:
+    post:
+      summary: Generate plan candidates from a goal and context references
+      responses:
+        '200':
+          description: Candidate plan, deterministic verification results, and PRAXOVELA projection
+  /plans:verify:
+    post:
+      summary: Verify a plan against immutable planning inputs
+      responses:
+        '200':
+          description: Evidence bundle for a valid plan
+        '422':
+          description: Evidence bundle listing deterministic violations
+  /plans:revise:
+    post:
+      summary: Create an evidence-backed revision without changing completed effects
+      responses:
+        '200':
+          description: Persisted revised plan package and auditable plan diff
+        '422':
+          description: Revision is invalid or changes a completed effect
+  /plans/{planId}:
+    get:
+      summary: Retrieve a persisted verified plan package
+      parameters:
+        - name: planId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Evidence-backed plan package
+        '404':
+          description: Plan package was not found
