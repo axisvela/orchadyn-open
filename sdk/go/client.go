@@ -51,6 +51,11 @@ func (c *Client) Generate(ctx context.Context, planningRequest PlanningRequest, 
 	return c.post(ctx, "/plans:generate", planningRequest, response)
 }
 
+// GenerateGoverned resolves capability and authority inputs through configured control planes.
+func (c *Client) GenerateGoverned(ctx context.Context, input GovernedPlanningInput, response any) error {
+	return c.post(ctx, "/governed-plans:generate", input, response)
+}
+
 // Verify verifies a plan against the immutable planning inputs that created it.
 func (c *Client) Verify(ctx context.Context, verificationRequest VerificationRequest, response any) error {
 	return c.post(ctx, "/plans:verify", verificationRequest, response)
@@ -59,6 +64,16 @@ func (c *Client) Verify(ctx context.Context, verificationRequest VerificationReq
 // Revise creates a new plan package without changing completed effects.
 func (c *Client) Revise(ctx context.Context, revisionRequest RevisionRequest, response any) error {
 	return c.post(ctx, "/plans:revise", revisionRequest, response)
+}
+
+// Project projects a persisted plan to a supported execution runtime.
+func (c *Client) Project(ctx context.Context, planID string, projectionRequest ProjectionRequest, response any) error {
+	return c.post(ctx, "/plans/"+url.PathEscape(planID)+":project", projectionRequest, response)
+}
+
+// AnalyzeImpact identifies the smallest plan subgraph affected by changed nodes.
+func (c *Client) AnalyzeImpact(ctx context.Context, planID string, request ImpactRequest, response any) error {
+	return c.post(ctx, "/plans/"+url.PathEscape(planID)+":impact", request, response)
 }
 
 func (c *Client) GetPlan(ctx context.Context, planID string, response any) error {

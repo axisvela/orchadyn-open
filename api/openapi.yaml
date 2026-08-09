@@ -16,6 +16,16 @@ paths:
       responses:
         '200':
           description: Candidate plan, deterministic verification results, and PRAXOVELA projection
+  /governed-plans:generate:
+    post:
+      summary: Generate a plan from MODUREGIS capability and AEGIVELA authority providers
+      responses:
+        '200':
+          description: Evidence-backed governed plan package
+        '422':
+          description: Deterministic governance violations prevented plan verification
+        '503':
+          description: Governed planning control plane is not configured
   /plans:verify:
     post:
       summary: Verify a plan against immutable planning inputs
@@ -44,5 +54,35 @@ paths:
       responses:
         '200':
           description: Evidence-backed plan package
+        '404':
+          description: Plan package was not found
+  /plans/{planId}:project:
+    post:
+      summary: Project a persisted plan to a supported execution runtime
+      parameters:
+        - name: planId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Runtime projection and semantic-loss report
+        '404':
+          description: Plan package was not found
+        '422':
+          description: Projection target is unsupported
+  /plans/{planId}:impact:
+    post:
+      summary: Identify the plan subgraph affected by changed nodes
+      parameters:
+        - name: planId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Changed, affected, and unknown plan node IDs
         '404':
           description: Plan package was not found

@@ -55,6 +55,15 @@ type PlanningRequest struct {
 	AuthorityGrants []AuthorityGrant              `json:"authorityGrants,omitempty"`
 }
 
+// GovernedPlanningInput omits caller-supplied catalog and grants because the service resolves them from control planes.
+type GovernedPlanningInput struct {
+	Tenant       string                        `json:"tenant"`
+	Goals        []Goal                        `json:"goals"`
+	Requirements []CapabilityRequirement       `json:"requirements"`
+	Constraints  []Constraint                  `json:"constraints"`
+	Delegations  map[string]DelegationContract `json:"delegations,omitempty"`
+}
+
 type VerificationRequest struct {
 	Plan    any             `json:"plan"`
 	Request PlanningRequest `json:"request"`
@@ -66,4 +75,12 @@ type RevisionRequest struct {
 	Trigger                string          `json:"trigger"`
 	InvalidatedAssumptions []string        `json:"invalidatedAssumptions,omitempty"`
 	CompletedNodeIDs       []string        `json:"completedNodeIds,omitempty"`
+}
+
+type ProjectionRequest struct {
+	Target string `json:"target"`
+}
+
+type ImpactRequest struct {
+	ChangedNodeIDs []string `json:"changedNodeIds"`
 }
