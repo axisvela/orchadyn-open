@@ -38,11 +38,16 @@ This repository contains Apache-2.0 licensed documentation, SDKs, examples,
 public API definitions, and binary release manifests. The AGPL planning kernel
 is maintained in [ORCHADYN](https://github.com/axisrobo/ORCHADYN).
 
+Start with the [quickstart](docs/quickstart.md), the versioned
+[OpenAPI contract](api/openapi.yaml), or the dependency-free
+[Go SDK](sdk/go).
+
 ## Contents
 
 - `api/`: versioned public HTTP API contracts.
 - `examples/`: API and SDK usage examples.
-- `docs/`: installation, architecture, and integration guidance.
+- `docs/`: installation, quickstart, and integration guidance.
+- `sdk/`: public language clients.
 - `releases/`: checksums and notices for published binaries.
 
 ## Compatibility

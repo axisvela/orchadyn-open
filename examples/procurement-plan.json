@@ -1,13 +1,42 @@
 {
-  "goal": {
+  "goals": [{
     "id": "approve-purchase-order",
     "owner": "procurement-director",
     "outcome": "purchase_order_approved",
     "deadline": "2026-08-31T00:00:00Z"
-  },
+  }],
+  "requirements": [{
+    "id": "purchase-order-approval",
+    "goalId": "approve-purchase-order",
+    "capabilityType": "purchase-order-approval",
+    "requiredEffect": "purchase_order_approved"
+  }],
+  "catalog": [{
+    "id": "eu-purchase-approval-v1",
+    "type": "purchase-order-approval",
+    "version": "1.0.0",
+    "effects": ["purchase_order_approved"],
+    "region": "eu",
+    "cost": 50000
+  }],
   "constraints": [
-    { "kind": "budget", "hard": true, "predicate": "amount <= 100000" },
-    { "kind": "segregation_of_duties", "hard": true, "predicate": "requester != approver" }
+    { "kind": "budget", "hard": true, "amount": 100000 },
+    { "kind": "region", "hard": true, "value": "eu" }
   ],
-  "projectionTarget": "rheovela"
+  "authorityGrants": [{
+    "principal": "procurement-director",
+    "scopes": ["purchase.approve", "evidence.write"],
+    "budgetCeiling": 100000,
+    "revoked": false
+  }],
+  "delegations": {
+    "purchase-order-approval": {
+      "delegator": "procurement-director",
+      "delegatee": "approval-runtime",
+      "parentScopes": ["purchase.approve", "evidence.write"],
+      "delegatedScopes": ["purchase.approve"],
+      "budgetCeiling": 100000,
+      "evidenceDuty": ["approval_record", "outcome_metrics"]
+    }
+  }
 }
