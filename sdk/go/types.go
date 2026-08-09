@@ -75,6 +75,7 @@ type RevisionRequest struct {
 	Trigger                string          `json:"trigger"`
 	InvalidatedAssumptions []string        `json:"invalidatedAssumptions,omitempty"`
 	CompletedNodeIDs       []string        `json:"completedNodeIds,omitempty"`
+	ChangedNodeIDs         []string        `json:"changedNodeIds,omitempty"`
 }
 
 type ProjectionRequest struct {
