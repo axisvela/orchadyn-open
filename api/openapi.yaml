@@ -4,12 +4,20 @@ info:
   version: 0.1.0
   description: Public contract for compiling and verifying capability plans.
 paths:
+  /plans:
+    get:
+      summary: List plan summaries available to the authenticated tenant
+      responses:
+        '200':
+          description: Tenant-scoped plan IDs and digests
   /healthz:
     get:
       summary: Check service health
       responses:
         '200':
-          description: Service is ready
+          description: API and plan ledger are ready
+        '503':
+          description: Plan ledger is unavailable or not configured
   /plans:generate:
     post:
       summary: Generate plan candidates from a goal and context references

@@ -84,6 +84,15 @@ func (c *Client) GetPlan(ctx context.Context, planID string, response any) error
 	return c.do(request, response)
 }
 
+// ListPlans returns plan summaries available to the authenticated tenant.
+func (c *Client) ListPlans(ctx context.Context, response any) error {
+	request, err := http.NewRequestWithContext(ctx, http.MethodGet, c.endpoint("/plans"), nil)
+	if err != nil {
+		return err
+	}
+	return c.do(request, response)
+}
+
 func (c *Client) post(ctx context.Context, path string, payload, response any) error {
 	encoded, err := json.Marshal(payload)
 	if err != nil {

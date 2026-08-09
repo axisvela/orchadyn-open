@@ -127,3 +127,24 @@ func TestAnalyzeImpact(t *testing.T) {
 		t.Fatalf("unexpected response: %#v", response)
 	}
 }
+
+func TestListPlans(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if request.Method != http.MethodGet || request.URL.Path != "/plans" {
+			t.Fatalf("unexpected request: %s %s", request.Method, request.URL.Path)
+		}
+		_, _ = writer.Write([]byte(`[{"planId":"plan-1","planDigest":"digest"}]`))
+	}))
+	defer server.Close()
+	client, err := NewClient(server.URL, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var summaries []PlanSummary
+	if err := client.ListPlans(context.Background(), &summaries); err != nil {
+		t.Fatal(err)
+	}
+	if len(summaries) != 1 || summaries[0].PlanID != "plan-1" {
+		t.Fatalf("unexpected summaries %#v", summaries)
+	}
+}

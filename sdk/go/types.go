@@ -85,3 +85,8 @@ type ProjectionRequest struct {
 type ImpactRequest struct {
 	ChangedNodeIDs []string `json:"changedNodeIds"`
 }
+
+type PlanSummary struct {
+	PlanID     string `json:"planId"`
+	PlanDigest string `json:"planDigest"`
+}
