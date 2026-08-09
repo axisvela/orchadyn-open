@@ -177,7 +177,7 @@ func TestListPlanEvents(t *testing.T) {
 		if request.URL.Path != "/plans/plan-1/events" {
 			t.Fatalf("unexpected path: %s", request.URL.Path)
 		}
-		_, _ = writer.Write([]byte(`[{"eventType":"plan.verified","planId":"plan-1"}]`))
+		_, _ = writer.Write([]byte(`[{"eventType":"plan.verified","planId":"plan-1","correlationId":"request-1"}]`))
 	}))
 	defer server.Close()
 	client, err := NewClient(server.URL, nil)
@@ -188,7 +188,7 @@ func TestListPlanEvents(t *testing.T) {
 	if err := client.ListPlanEvents(context.Background(), "plan-1", &events); err != nil {
 		t.Fatal(err)
 	}
-	if len(events) != 1 || events[0].EventType != "plan.verified" {
+	if len(events) != 1 || events[0].EventType != "plan.verified" || events[0].CorrelationID != "request-1" {
 		t.Fatalf("unexpected events %#v", events)
 	}
 }

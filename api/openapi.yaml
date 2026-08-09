@@ -105,7 +105,9 @@ paths:
             type: string
       responses:
         '200':
-          description: Immutable plan audit events
+          description: Immutable plan audit events, including correlation IDs for cross-service tracing
+        '404':
+          description: Plan package was not found
   /plans/{planId}:impact:
     post:
       summary: Identify the plan subgraph affected by changed nodes
