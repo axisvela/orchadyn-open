@@ -148,3 +148,47 @@ func TestListPlans(t *testing.T) {
 		t.Fatalf("unexpected summaries %#v", summaries)
 	}
 }
+
+func TestExplainPlan(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if request.URL.Path != "/plans/plan-1/explain" {
+			t.Fatalf("unexpected path: %s", request.URL.Path)
+		}
+		_, _ = writer.Write([]byte(`{"planId":"plan-1","validatorVersion":"opir-v0.1"}`))
+	}))
+	defer server.Close()
+	client, err := NewClient(server.URL, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var explanation struct {
+		PlanID string `json:"planId"`
+	}
+	if err := client.ExplainPlan(context.Background(), "plan-1", &explanation); err != nil {
+		t.Fatal(err)
+	}
+	if explanation.PlanID != "plan-1" {
+		t.Fatalf("unexpected explanation %#v", explanation)
+	}
+}
+
+func TestListPlanEvents(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if request.URL.Path != "/plans/plan-1/events" {
+			t.Fatalf("unexpected path: %s", request.URL.Path)
+		}
+		_, _ = writer.Write([]byte(`[{"eventType":"plan.verified","planId":"plan-1"}]`))
+	}))
+	defer server.Close()
+	client, err := NewClient(server.URL, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var events []PlanEvent
+	if err := client.ListPlanEvents(context.Background(), "plan-1", &events); err != nil {
+		t.Fatal(err)
+	}
+	if len(events) != 1 || events[0].EventType != "plan.verified" {
+		t.Fatalf("unexpected events %#v", events)
+	}
+}

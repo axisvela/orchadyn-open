@@ -90,3 +90,10 @@ type PlanSummary struct {
 	PlanID     string `json:"planId"`
 	PlanDigest string `json:"planDigest"`
 }
+
+type PlanEvent struct {
+	EventType  string `json:"eventType"`
+	PlanID     string `json:"planId"`
+	PlanDigest string `json:"planDigest"`
+	OccurredAt string `json:"occurredAt"`
+}

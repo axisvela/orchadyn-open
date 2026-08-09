@@ -93,6 +93,24 @@ func (c *Client) ListPlans(ctx context.Context, response any) error {
 	return c.do(request, response)
 }
 
+// ExplainPlan returns only candidate, validation, and revision evidence recorded for a plan.
+func (c *Client) ExplainPlan(ctx context.Context, planID string, response any) error {
+	request, err := http.NewRequestWithContext(ctx, http.MethodGet, c.endpoint("/plans/"+url.PathEscape(planID)+"/explain"), nil)
+	if err != nil {
+		return err
+	}
+	return c.do(request, response)
+}
+
+// ListPlanEvents returns immutable verification and revision events recorded for a plan.
+func (c *Client) ListPlanEvents(ctx context.Context, planID string, response any) error {
+	request, err := http.NewRequestWithContext(ctx, http.MethodGet, c.endpoint("/plans/"+url.PathEscape(planID)+"/events"), nil)
+	if err != nil {
+		return err
+	}
+	return c.do(request, response)
+}
+
 func (c *Client) post(ctx context.Context, path string, payload, response any) error {
 	encoded, err := json.Marshal(payload)
 	if err != nil {

@@ -80,6 +80,32 @@ paths:
           description: Plan package was not found
         '422':
           description: Projection target is unsupported
+  /plans/{planId}/explain:
+    get:
+      summary: Retrieve recorded candidate, validation, and revision evidence for a plan
+      parameters:
+        - name: planId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Evidence-backed explanation without generated rationale
+        '404':
+          description: Plan package was not found
+  /plans/{planId}/events:
+    get:
+      summary: List tenant-scoped verification and revision events for a plan
+      parameters:
+        - name: planId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Immutable plan audit events
   /plans/{planId}:impact:
     post:
       summary: Identify the plan subgraph affected by changed nodes
