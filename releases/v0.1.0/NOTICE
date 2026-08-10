@@ -1,0 +1,24 @@
+ORCHADYN Core Binary Release v0.1.0
+
+These binaries are compiled from the ORCHADYN planning kernel
+(https://github.com/axisrobo/ORCHADYN) at commit 6f15520
+("Prepare CHANGELOG for v0.1.0 release").
+
+Binaries
+  - orchadyn-api   : ORCHADYN Planning API service (HTTP).
+  - orchadyn-mcp   : ORCHADYN MCP planning server (stdio).
+
+Platforms
+  linux   amd64, arm64
+  darwin  amd64, arm64
+  windows amd64, arm64
+
+Verify a binary with the SHA256SUMS file in this directory:
+
+  sha256sum -c SHA256SUMS
+
+License
+  The ORCHADYN planning kernel, and therefore these binaries, are licensed
+  under the GNU Affero General Public License v3.0 or later. This repository
+  (ORCHADYN-open) is Apache-2.0; the binaries it publishes remain under the
+  AGPL-3.0-or-later terms of their source. See https://www.gnu.org/licenses/agpl-3.0.txt.
