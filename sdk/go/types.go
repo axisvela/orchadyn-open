@@ -102,6 +102,11 @@ type SetStateRequest struct {
 	State string `json:"state"`
 }
 
+// NodeProgressRequest records the execution status of a plan node.
+type NodeProgressRequest struct {
+	Status string `json:"status"`
+}
+
 type ImpactRequest struct {
 	ChangedNodeIDs []string `json:"changedNodeIds"`
 }

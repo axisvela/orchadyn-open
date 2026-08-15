@@ -1,0 +1,80 @@
+{
+  "goals": [{
+    "id": "restore-production",
+    "owner": "service-owner",
+    "outcome": "production_restored",
+    "deadline": "2026-09-30T00:00:00Z",
+    "dependsOn": ["prepare-incident-response"]
+  }, {
+    "id": "prepare-incident-response",
+    "owner": "service-owner",
+    "outcome": "response_plan_prepared",
+    "deadline": "2026-09-15T00:00:00Z"
+  }],
+  "requirements": [{
+    "id": "restore-capability",
+    "goalId": "restore-production",
+    "capabilityType": "incident-recovery",
+    "requiredEffect": "production_restored"
+  }, {
+    "id": "response-capability",
+    "goalId": "prepare-incident-response",
+    "capabilityType": "runbook",
+    "requiredEffect": "response_plan_prepared",
+    "dependsOn": ["restore-capability"]
+  }],
+  "catalog": [{
+    "id": "eu-recovery-silver",
+    "type": "incident-recovery",
+    "version": "2.0.0",
+    "effects": ["production_restored"],
+    "region": "eu",
+    "cost": 80000,
+    "deliveredAt": "2026-09-20T00:00:00Z",
+    "availability": 99,
+    "sla": "gold"
+  }, {
+    "id": "us-recovery-basic",
+    "type": "incident-recovery",
+    "version": "1.0.0",
+    "effects": ["production_restored"],
+    "region": "us",
+    "cost": 40000,
+    "deliveredAt": "2026-10-10T00:00:00Z",
+    "availability": 95,
+    "sla": "silver"
+  }, {
+    "id": "eu-runbook",
+    "type": "runbook",
+    "version": "1.1.0",
+    "effects": ["response_plan_prepared"],
+    "region": "eu",
+    "cost": 10000,
+    "deliveredAt": "2026-09-10T00:00:00Z",
+    "availability": 99,
+    "sla": "gold"
+  }],
+  "constraints": [
+    { "kind": "budget", "hard": true, "amount": 100000 },
+    { "kind": "region", "hard": true, "value": "eu" },
+    { "kind": "deadline", "hard": true, "value": "2026-09-30T00:00:00Z" },
+    { "kind": "availability", "hard": true, "amount": 98 },
+    { "kind": "sla", "hard": true, "value": "gold" }
+  ],
+  "authorityGrants": [{
+    "principal": "service-owner",
+    "scopes": ["incident.execute", "evidence.write"],
+    "budgetCeiling": 100000,
+    "revoked": false
+  }],
+  "delegations": {
+    "restore-capability": {
+      "delegator": "service-owner",
+      "delegatee": "recovery-runtime",
+      "parentScopes": ["incident.execute", "evidence.write"],
+      "delegatedScopes": ["incident.execute"],
+      "budgetCeiling": 100000,
+      "evidenceDuty": ["restore_record", "outcome_metrics"]
+    }
+  }
+}

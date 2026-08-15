@@ -247,3 +247,33 @@ func TestSetPlanState(t *testing.T) {
 		t.Fatalf("unexpected response: %#v", response)
 	}
 }
+
+func TestRecordNodeProgress(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if request.Method != http.MethodPost || request.URL.Path != "/plans/plan-1/nodes/node-1:progress" {
+			t.Fatalf("unexpected request: %s %s", request.Method, request.URL.Path)
+		}
+		var payload NodeProgressRequest
+		if err := json.NewDecoder(request.Body).Decode(&payload); err != nil {
+			t.Fatal(err)
+		}
+		if payload.Status != "completed" {
+			t.Fatalf("unexpected payload: %#v", payload)
+		}
+		_, _ = writer.Write([]byte(`{"status":"recorded"}`))
+	}))
+	defer server.Close()
+	client, err := NewClient(server.URL, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var response struct {
+		Status string `json:"status"`
+	}
+	if err := client.RecordNodeProgress(context.Background(), "plan-1", "node-1", NodeProgressRequest{Status: "completed"}, &response); err != nil {
+		t.Fatal(err)
+	}
+	if response.Status != "recorded" {
+		t.Fatalf("unexpected response: %#v", response)
+	}
+}

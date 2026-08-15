@@ -86,6 +86,11 @@ func (c *Client) SetPlanState(ctx context.Context, planID string, request SetSta
 	return c.post(ctx, "/plans/"+url.PathEscape(planID)+":state", request, response)
 }
 
+// RecordNodeProgress records the execution status of a plan node.
+func (c *Client) RecordNodeProgress(ctx context.Context, planID, nodeID string, request NodeProgressRequest, response any) error {
+	return c.post(ctx, "/plans/"+url.PathEscape(planID)+"/nodes/"+url.PathEscape(nodeID)+":progress", request, response)
+}
+
 func (c *Client) GetPlan(ctx context.Context, planID string, response any) error {
 	request, err := http.NewRequestWithContext(ctx, http.MethodGet, c.endpoint("/plans/"+url.PathEscape(planID)), nil)
 	if err != nil {

@@ -12,6 +12,16 @@ curl --request POST http://localhost:8080/plans:generate \
 The response contains a candidate plan, deterministic validation results,
 evidence tied to the planning inputs, and a PRAXOVELA reference projection.
 
+The [`examples/`](../examples/) directory also includes
+[`scheduling-plan.json`](../examples/scheduling-plan.json), which demonstrates
+deadline, availability, and SLA constraints together with goal decomposition:
+
+```sh
+curl --request POST http://localhost:8080/plans:generate \
+  --header "Content-Type: application/json" \
+  --data @examples/scheduling-plan.json
+```
+
 ## Go SDK
 
 The Go SDK has no runtime dependencies. From `sdk/go`:
