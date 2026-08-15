@@ -62,3 +62,12 @@ all applicable license notices.
 - SBOM: [`v0.7.0/sbom.json`](v0.7.0/sbom.json)
 - Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
   `3dfcd3b` (`v0.7.0`). Binaries are AGPL-3.0-or-later.
+
+## v0.8.0
+
+- Manifest: [`v0.8.0/`](v0.8.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v0.8.0/sbom.json`](v0.8.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `cfaf231` (`v0.8.0`). Binaries are AGPL-3.0-or-later.
