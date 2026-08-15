@@ -154,7 +154,7 @@ func TestExplainPlan(t *testing.T) {
 		if request.URL.Path != "/plans/plan-1/explain" {
 			t.Fatalf("unexpected path: %s", request.URL.Path)
 		}
-		_, _ = writer.Write([]byte(`{"planId":"plan-1","validatorVersion":"opir-v0.1"}`))
+		_, _ = writer.Write([]byte(`{"planId":"plan-1","validatorVersion":"opir-v0.2"}`))
 	}))
 	defer server.Close()
 	client, err := NewClient(server.URL, nil)
