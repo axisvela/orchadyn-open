@@ -128,6 +128,52 @@ func TestAnalyzeImpact(t *testing.T) {
 	}
 }
 
+func TestListPlansByState(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if request.URL.Path != "/plans" || request.URL.Query().Get("state") != "approved" {
+			t.Fatalf("unexpected request: %s", request.URL.String())
+		}
+		_, _ = writer.Write([]byte(`[{"planId":"plan-1","planDigest":"digest"}]`))
+	}))
+	defer server.Close()
+	client, err := NewClient(server.URL, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var summaries []PlanSummary
+	if err := client.ListPlansByState(context.Background(), "approved", &summaries); err != nil {
+		t.Fatal(err)
+	}
+	if len(summaries) != 1 || summaries[0].PlanID != "plan-1" {
+		t.Fatalf("unexpected summaries %#v", summaries)
+	}
+}
+
+func TestExportPlan(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if request.URL.Path != "/plans/plan-1:export" {
+			t.Fatalf("unexpected path: %s", request.URL.Path)
+		}
+		_, _ = writer.Write([]byte(`{"plan":{"id":"plan-1"},"events":[]}`))
+	}))
+	defer server.Close()
+	client, err := NewClient(server.URL, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var archive struct {
+		Plan struct {
+			ID string `json:"id"`
+		} `json:"plan"`
+	}
+	if err := client.ExportPlan(context.Background(), "plan-1", &archive); err != nil {
+		t.Fatal(err)
+	}
+	if archive.Plan.ID != "plan-1" {
+		t.Fatalf("unexpected archive %#v", archive)
+	}
+}
+
 func TestListPlans(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
 		if request.Method != http.MethodGet || request.URL.Path != "/plans" {

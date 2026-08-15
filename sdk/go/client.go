@@ -108,6 +108,25 @@ func (c *Client) ListPlans(ctx context.Context, response any) error {
 	return c.do(request, response)
 }
 
+// ListPlansByState returns plan summaries filtered by lifecycle state.
+func (c *Client) ListPlansByState(ctx context.Context, state string, response any) error {
+	request, err := http.NewRequestWithContext(ctx, http.MethodGet, c.endpoint("/plans?state="+url.QueryEscape(state)), nil)
+	if err != nil {
+		return err
+	}
+	return c.do(request, response)
+}
+
+// ExportPlan returns a plan archive binding the plan to evidence, events, and
+// revision lineage.
+func (c *Client) ExportPlan(ctx context.Context, planID string, response any) error {
+	request, err := http.NewRequestWithContext(ctx, http.MethodGet, c.endpoint("/plans/"+url.PathEscape(planID)+":export"), nil)
+	if err != nil {
+		return err
+	}
+	return c.do(request, response)
+}
+
 // ExplainPlan returns only candidate, validation, and revision evidence recorded for a plan.
 func (c *Client) ExplainPlan(ctx context.Context, planID string, response any) error {
 	request, err := http.NewRequestWithContext(ctx, http.MethodGet, c.endpoint("/plans/"+url.PathEscape(planID)+"/explain"), nil)
@@ -163,6 +182,12 @@ func (c *Client) do(request *http.Request, response any) error {
 
 func (c *Client) endpoint(path string) string {
 	endpoint := *c.baseURL
+	query := ""
+	if index := strings.IndexByte(path, '?'); index >= 0 {
+		query = path[index+1:]
+		path = path[:index]
+	}
 	endpoint.Path = strings.TrimRight(endpoint.Path, "/") + path
+	endpoint.RawQuery = query
 	return endpoint.String()
 }
