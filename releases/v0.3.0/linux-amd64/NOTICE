@@ -1,6 +1,6 @@
 ORCHADYN Core Binary Release v0.3.0
 
-Source: https://github.com/axisrobo/ORCHADYN commit 65ed666.
+Source: https://github.com/axisrobo/ORCHADYN commit af5b540.
 
 Artifacts:
   - orchadyn-api: ORCHADYN Planning API service (HTTP).   - orchadyn-mcp: ORCHADYN MCP planning server (stdio).   - orchadyn-migrate: ORCHADYN database migration tool.

@@ -19,3 +19,11 @@ all applicable license notices.
   `orchadyn-migrate.exe` for Windows/amd64.
 - Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
   `8487670` (`v0.2.0`). Binaries are AGPL-3.0-or-later.
+
+## v0.3.0
+
+- Manifest: [`v0.3.0/`](v0.3.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `af5b540` (`v0.3.0`). Binaries are AGPL-3.0-or-later.
