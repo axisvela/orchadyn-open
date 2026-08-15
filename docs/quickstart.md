@@ -4,7 +4,7 @@ Run an ORCHADYN Planning API service, then submit the included procurement
 planning request:
 
 ```sh
-curl --request POST http://localhost:8080/plans:generate \
+curl --request POST http://localhost:1816/plans:generate \
   --header "Content-Type: application/json" \
   --data @examples/procurement-plan.json
 ```
@@ -17,7 +17,7 @@ The [`examples/`](../examples/) directory also includes
 deadline, availability, and SLA constraints together with goal decomposition:
 
 ```sh
-curl --request POST http://localhost:8080/plans:generate \
+curl --request POST http://localhost:1816/plans:generate \
   --header "Content-Type: application/json" \
   --data @examples/scheduling-plan.json
 ```
@@ -33,7 +33,7 @@ go test ./...
 Create a client against the API endpoint and submit a typed `PlanningRequest`:
 
 ```go
-client, err := orchadyn.NewClient("http://localhost:8080", nil)
+client, err := orchadyn.NewClient("http://localhost:1816", nil)
 if err != nil {
     return err
 }

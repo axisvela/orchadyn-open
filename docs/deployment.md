@@ -67,7 +67,7 @@ docker compose -f deploy/compose.yaml up
 Verify a deployment with the quickstart request:
 
 ```sh
-curl --request POST http://localhost:8080/plans:generate \
+curl --request POST http://localhost:1816/plans:generate \
   --header "Content-Type: application/json" \
   --data @examples/scheduling-plan.json
 ```
