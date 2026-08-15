@@ -192,3 +192,58 @@ func TestListPlanEvents(t *testing.T) {
 		t.Fatalf("unexpected events %#v", events)
 	}
 }
+
+func TestAdapt(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if request.URL.Path != "/plans/plan-1:adapt" {
+			t.Fatalf("unexpected path: %s", request.URL.Path)
+		}
+		_, _ = writer.Write([]byte(`{"target":"third-party"}`))
+	}))
+	defer server.Close()
+	client, err := NewClient(server.URL, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var response struct {
+		Target string `json:"target"`
+	}
+	if err := client.Adapt(context.Background(), "plan-1", AdaptRequest{Target: "third-party"}, &response); err != nil {
+		t.Fatal(err)
+	}
+	if response.Target != "third-party" {
+		t.Fatalf("unexpected response: %#v", response)
+	}
+}
+
+func TestSetPlanState(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if request.Method != http.MethodPost || request.URL.Path != "/plans/plan-1:state" {
+			t.Fatalf("unexpected request: %s %s", request.Method, request.URL.Path)
+		}
+		var payload SetStateRequest
+		if err := json.NewDecoder(request.Body).Decode(&payload); err != nil {
+			t.Fatal(err)
+		}
+		if payload.State != "approved" {
+			t.Fatalf("unexpected payload: %#v", payload)
+		}
+		_, _ = writer.Write([]byte(`{"plan":{"id":"plan-1","state":"approved"}}`))
+	}))
+	defer server.Close()
+	client, err := NewClient(server.URL, nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var response struct {
+		Plan struct {
+			State string `json:"state"`
+		} `json:"plan"`
+	}
+	if err := client.SetPlanState(context.Background(), "plan-1", SetStateRequest{State: "approved"}, &response); err != nil {
+		t.Fatal(err)
+	}
+	if response.Plan.State != "approved" {
+		t.Fatalf("unexpected response: %#v", response)
+	}
+}

@@ -1,10 +1,11 @@
 package orchadyn
 
 type Goal struct {
-	ID       string `json:"id"`
-	Owner    string `json:"owner"`
-	Outcome  string `json:"outcome"`
-	Deadline string `json:"deadline"`
+	ID        string   `json:"id"`
+	Owner     string   `json:"owner"`
+	Outcome   string   `json:"outcome"`
+	Deadline  string   `json:"deadline"`
+	DependsOn []string `json:"dependsOn,omitempty"`
 }
 
 type CapabilityRequirement struct {
@@ -15,12 +16,15 @@ type CapabilityRequirement struct {
 }
 
 type Capability struct {
-	ID      string   `json:"id"`
-	Type    string   `json:"type"`
-	Version string   `json:"version"`
-	Effects []string `json:"effects"`
-	Region  string   `json:"region"`
-	Cost    int64    `json:"cost"`
+	ID           string   `json:"id"`
+	Type         string   `json:"type"`
+	Version      string   `json:"version"`
+	Effects      []string `json:"effects"`
+	Region       string   `json:"region"`
+	Cost         int64    `json:"cost"`
+	DeliveredAt  string   `json:"deliveredAt,omitempty"`
+	Availability int64    `json:"availability,omitempty"`
+	SLA          string   `json:"sla,omitempty"`
 }
 
 type Constraint struct {
@@ -47,12 +51,18 @@ type DelegationContract struct {
 }
 
 type PlanningRequest struct {
-	Goals           []Goal                        `json:"goals"`
-	Requirements    []CapabilityRequirement       `json:"requirements"`
-	Catalog         []Capability                  `json:"catalog"`
-	Constraints     []Constraint                  `json:"constraints"`
-	Delegations     map[string]DelegationContract `json:"delegations,omitempty"`
-	AuthorityGrants []AuthorityGrant              `json:"authorityGrants,omitempty"`
+	Goals            []Goal                        `json:"goals"`
+	Requirements     []CapabilityRequirement       `json:"requirements"`
+	Catalog          []Capability                  `json:"catalog"`
+	Constraints      []Constraint                  `json:"constraints"`
+	Delegations      map[string]DelegationContract `json:"delegations,omitempty"`
+	AuthorityGrants  []AuthorityGrant              `json:"authorityGrants,omitempty"`
+	OperationalState []OperationalState            `json:"operationalState,omitempty"`
+}
+
+type OperationalState struct {
+	CapabilityID string `json:"capabilityId"`
+	Available    bool   `json:"available"`
 }
 
 // GovernedPlanningInput omits caller-supplied catalog and grants because the service resolves them from control planes.
@@ -80,6 +90,16 @@ type RevisionRequest struct {
 
 type ProjectionRequest struct {
 	Target string `json:"target"`
+}
+
+// AdaptRequest selects a registered third-party adapter target.
+type AdaptRequest struct {
+	Target string `json:"target"`
+}
+
+// SetStateRequest requests a governed plan lifecycle transition.
+type SetStateRequest struct {
+	State string `json:"state"`
 }
 
 type ImpactRequest struct {

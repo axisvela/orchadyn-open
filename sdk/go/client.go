@@ -76,6 +76,16 @@ func (c *Client) AnalyzeImpact(ctx context.Context, planID string, request Impac
 	return c.post(ctx, "/plans/"+url.PathEscape(planID)+":impact", request, response)
 }
 
+// Adapt adapts a persisted plan to a registered third-party runtime.
+func (c *Client) Adapt(ctx context.Context, planID string, request AdaptRequest, response any) error {
+	return c.post(ctx, "/plans/"+url.PathEscape(planID)+":adapt", request, response)
+}
+
+// SetPlanState transitions a persisted plan through the governed lifecycle.
+func (c *Client) SetPlanState(ctx context.Context, planID string, request SetStateRequest, response any) error {
+	return c.post(ctx, "/plans/"+url.PathEscape(planID)+":state", request, response)
+}
+
 func (c *Client) GetPlan(ctx context.Context, planID string, response any) error {
 	request, err := http.NewRequestWithContext(ctx, http.MethodGet, c.endpoint("/plans/"+url.PathEscape(planID)), nil)
 	if err != nil {

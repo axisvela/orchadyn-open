@@ -34,3 +34,31 @@ err = client.Generate(ctx, request, &result)
 
 The SDK returns `*orchadyn.APIError` for non-2xx API responses, retaining the
 HTTP status code and response body for policy or verification failures.
+
+## Plan lifecycle
+
+Generated plans are governed through `draft`, `approved`, and `executing`
+states. Transition a stored plan with `SetPlanState`, and read the recorded
+`plan.state_changed` events with `ListPlanEvents`:
+
+```go
+var updated map[string]any
+err = client.SetPlanState(ctx, planID, orchadyn.SetStateRequest{State: "approved"}, &updated)
+
+var events []orchadyn.PlanEvent
+err = client.ListPlanEvents(ctx, planID, &events)
+```
+
+## Evidence
+
+Every verification result carries an `attestations` chain that binds the plan
+digest to its immutable planning-input digest. Fetch the stored plan package to
+inspect the evidence:
+
+```go
+var packageJSON map[string]any
+err = client.GetPlan(ctx, planID, &packageJSON)
+```
+
+Use `ExplainPlan` to read only the recorded candidates, validations, and
+revision evidence for a plan.
