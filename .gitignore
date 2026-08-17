@@ -1,0 +1,9 @@
+# Binary release artifacts are distributed as GitHub Release assets, not
+# committed to git. The repository tracks manifests, checksums, SBOMs, and
+# license notices only.
+releases/**/orchadyn-api
+releases/**/orchadyn-mcp
+releases/**/orchadyn-migrate
+releases/**/orchadyn-api.exe
+releases/**/orchadyn-mcp.exe
+releases/**/orchadyn-migrate.exe
