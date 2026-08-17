@@ -287,6 +287,322 @@ all applicable license notices.
 - Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
   `89d3a72` (`v1.22.0`). Binaries are AGPL-3.0-or-later.
 
+## v1.23.0
+
+- Manifest: [`v1.23.0/`](v1.23.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.23.0/sbom.json`](v1.23.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `1effa6e` (`v1.23.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.24.0
+
+- Manifest: [`v1.24.0/`](v1.24.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.24.0/sbom.json`](v1.24.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `e25fc21` (`v1.24.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.25.0
+
+- Manifest: [`v1.25.0/`](v1.25.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.25.0/sbom.json`](v1.25.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `0c551d0` (`v1.25.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.26.0
+
+- Manifest: [`v1.26.0/`](v1.26.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.26.0/sbom.json`](v1.26.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `5490908` (`v1.26.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.27.0
+
+- Manifest: [`v1.27.0/`](v1.27.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.27.0/sbom.json`](v1.27.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `3563343` (`v1.27.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.28.0
+
+- Manifest: [`v1.28.0/`](v1.28.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.28.0/sbom.json`](v1.28.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `3c727e7` (`v1.28.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.29.0
+
+- Manifest: [`v1.29.0/`](v1.29.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.29.0/sbom.json`](v1.29.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `fa827e5` (`v1.29.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.30.0
+
+- Manifest: [`v1.30.0/`](v1.30.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.30.0/sbom.json`](v1.30.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `12326a3` (`v1.30.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.31.0
+
+- Manifest: [`v1.31.0/`](v1.31.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.31.0/sbom.json`](v1.31.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `d994003` (`v1.31.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.32.0
+
+- Manifest: [`v1.32.0/`](v1.32.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.32.0/sbom.json`](v1.32.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `2293440` (`v1.32.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.33.0
+
+- Manifest: [`v1.33.0/`](v1.33.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.33.0/sbom.json`](v1.33.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `f1d1aca` (`v1.33.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.34.0
+
+- Manifest: [`v1.34.0/`](v1.34.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.34.0/sbom.json`](v1.34.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `9706512` (`v1.34.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.35.0
+
+- Manifest: [`v1.35.0/`](v1.35.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.35.0/sbom.json`](v1.35.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `e66b087` (`v1.35.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.36.0
+
+- Manifest: [`v1.36.0/`](v1.36.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.36.0/sbom.json`](v1.36.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `0194bac` (`v1.36.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.37.0
+
+- Manifest: [`v1.37.0/`](v1.37.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.37.0/sbom.json`](v1.37.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `4181b33` (`v1.37.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.38.0
+
+- Manifest: [`v1.38.0/`](v1.38.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.38.0/sbom.json`](v1.38.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `32b032c` (`v1.38.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.39.0
+
+- Manifest: [`v1.39.0/`](v1.39.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.39.0/sbom.json`](v1.39.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `158658f` (`v1.39.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.40.0
+
+- Manifest: [`v1.40.0/`](v1.40.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.40.0/sbom.json`](v1.40.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `68daca2` (`v1.40.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.41.0
+
+- Manifest: [`v1.41.0/`](v1.41.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.41.0/sbom.json`](v1.41.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `0115a56` (`v1.41.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.42.0
+
+- Manifest: [`v1.42.0/`](v1.42.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.42.0/sbom.json`](v1.42.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `2638b67` (`v1.42.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.43.0
+
+- Manifest: [`v1.43.0/`](v1.43.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.43.0/sbom.json`](v1.43.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `8493e09` (`v1.43.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.44.0
+
+- Manifest: [`v1.44.0/`](v1.44.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.44.0/sbom.json`](v1.44.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `469baad` (`v1.44.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.45.0
+
+- Manifest: [`v1.45.0/`](v1.45.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.45.0/sbom.json`](v1.45.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `796912f` (`v1.45.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.46.0
+
+- Manifest: [`v1.46.0/`](v1.46.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.46.0/sbom.json`](v1.46.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `fdc4914` (`v1.46.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.47.0
+
+- Manifest: [`v1.47.0/`](v1.47.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.47.0/sbom.json`](v1.47.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `fefe33d` (`v1.47.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.48.0
+
+- Manifest: [`v1.48.0/`](v1.48.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.48.0/sbom.json`](v1.48.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `a3425a9` (`v1.48.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.49.0
+
+- Manifest: [`v1.49.0/`](v1.49.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.49.0/sbom.json`](v1.49.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `30b9475` (`v1.49.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.50.0
+
+- Manifest: [`v1.50.0/`](v1.50.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.50.0/sbom.json`](v1.50.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `957929e` (`v1.50.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.51.0
+
+- Manifest: [`v1.51.0/`](v1.51.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.51.0/sbom.json`](v1.51.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `3a704f7` (`v1.51.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.52.0
+
+- Manifest: [`v1.52.0/`](v1.52.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.52.0/sbom.json`](v1.52.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `c15ce5b` (`v1.52.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.53.0
+
+- Manifest: [`v1.53.0/`](v1.53.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.53.0/sbom.json`](v1.53.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `88c9479` (`v1.53.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.54.0
+
+- Manifest: [`v1.54.0/`](v1.54.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.54.0/sbom.json`](v1.54.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `189d10c` (`v1.54.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.55.0
+
+- Manifest: [`v1.55.0/`](v1.55.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.55.0/sbom.json`](v1.55.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `4d9b2ed` (`v1.55.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.56.0
+
+- Manifest: [`v1.56.0/`](v1.56.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.56.0/sbom.json`](v1.56.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `f8ce70f` (`v1.56.0`). Binaries are AGPL-3.0-or-later.
+
+## v1.57.0
+
+- Manifest: [`v1.57.0/`](v1.57.0/)
+- Binaries: `orchadyn-api`, `orchadyn-mcp`, and `orchadyn-migrate` for
+  Windows/amd64, linux (amd64 + arm64), and darwin (amd64 + arm64).
+- SBOM: [`v1.57.0/sbom.json`](v1.57.0/sbom.json)
+- Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
+  `af094ba` (`v1.57.0`). Binaries are AGPL-3.0-or-later.
+
+
 ## v1.58.0
 
 - Manifest: [`v1.58.0/`](v1.58.0/)
@@ -295,10 +611,4 @@ all applicable license notices.
 - SBOM: [`v1.58.0/sbom.json`](v1.58.0/sbom.json)
 - Source: [ORCHADYN core](https://github.com/axisrobo/ORCHADYN) at commit
   `b1ba175` (`v1.58.0`). Binaries are AGPL-3.0-or-later.
-
-> **Backfill note:** the v1.23.0–v1.57.0 release manifests were not staged when
-> those versions shipped and are not published here yet. Each requires a full
-> five-platform cross-compile from its source tag. The current release
-> (v1.58.0) is staged; the historical backfill is tracked as deferred work.
-
 

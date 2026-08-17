@@ -1,0 +1,10 @@
+ORCHADYN Core Binary Release v1.44.0
+
+Source: https://github.com/axisrobo/ORCHADYN commit 469baad.
+
+Artifacts:
+  - orchadyn-api: ORCHADYN Planning API service (HTTP).   - orchadyn-mcp: ORCHADYN MCP planning server (stdio).   - orchadyn-migrate: ORCHADYN database migration tool.
+
+Platform: darwin/arm64.
+
+License: AGPL-3.0-or-later. See LICENSE-ORCHADYN-CORE.txt.

@@ -1,0 +1,173 @@
+{
+    "bomFormat":  "CycloneDX",
+    "components":  [
+                       {
+                           "purl":  "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
+                           "name":  "github.com/davecgh/go-spew",
+                           "version":  "v1.1.1",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/dlclark/regexp2@v1.11.0",
+                           "name":  "github.com/dlclark/regexp2",
+                           "version":  "v1.11.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/frankban/quicktest@v1.14.6",
+                           "name":  "github.com/frankban/quicktest",
+                           "version":  "v1.14.6",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/google/go-cmp@v0.7.0",
+                           "name":  "github.com/google/go-cmp",
+                           "version":  "v0.7.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/google/jsonschema-go@v0.4.2",
+                           "name":  "github.com/google/jsonschema-go",
+                           "version":  "v0.4.2",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/google/uuid@v1.6.0",
+                           "name":  "github.com/google/uuid",
+                           "version":  "v1.6.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/jackc/pgpassfile@v1.0.0",
+                           "name":  "github.com/jackc/pgpassfile",
+                           "version":  "v1.0.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/jackc/pgservicefile@v0.0.0-20240606120523-5a60cdf6a761",
+                           "name":  "github.com/jackc/pgservicefile",
+                           "version":  "v0.0.0-20240606120523-5a60cdf6a761",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/jackc/pgx/v5@v5.10.0",
+                           "name":  "github.com/jackc/pgx/v5",
+                           "version":  "v5.10.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/jackc/puddle/v2@v2.2.2",
+                           "name":  "github.com/jackc/puddle/v2",
+                           "version":  "v2.2.2",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/kr/pretty@v0.3.1",
+                           "name":  "github.com/kr/pretty",
+                           "version":  "v0.3.1",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/kr/text@v0.2.0",
+                           "name":  "github.com/kr/text",
+                           "version":  "v0.2.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/mark3labs/mcp-go@v0.57.0",
+                           "name":  "github.com/mark3labs/mcp-go",
+                           "version":  "v0.57.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/pmezard/go-difflib@v1.0.0",
+                           "name":  "github.com/pmezard/go-difflib",
+                           "version":  "v1.0.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/rogpeppe/go-internal@v1.14.1",
+                           "name":  "github.com/rogpeppe/go-internal",
+                           "version":  "v1.14.1",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/santhosh-tekuri/jsonschema/v6@v6.0.2",
+                           "name":  "github.com/santhosh-tekuri/jsonschema/v6",
+                           "version":  "v6.0.2",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/spf13/cast@v1.7.1",
+                           "name":  "github.com/spf13/cast",
+                           "version":  "v1.7.1",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/stretchr/objx@v0.1.0",
+                           "name":  "github.com/stretchr/objx",
+                           "version":  "v0.1.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/stretchr/testify@v1.11.1",
+                           "name":  "github.com/stretchr/testify",
+                           "version":  "v1.11.1",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/github.com/yosida95/uritemplate/v3@v3.0.2",
+                           "name":  "github.com/yosida95/uritemplate/v3",
+                           "version":  "v3.0.2",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/golang.org/x/mod@v0.37.0",
+                           "name":  "golang.org/x/mod",
+                           "version":  "v0.37.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/golang.org/x/sync@v0.21.0",
+                           "name":  "golang.org/x/sync",
+                           "version":  "v0.21.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/golang.org/x/text@v0.39.0",
+                           "name":  "golang.org/x/text",
+                           "version":  "v0.39.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/golang.org/x/tools@v0.47.0",
+                           "name":  "golang.org/x/tools",
+                           "version":  "v0.47.0",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/gopkg.in/check.v1@v1.0.0-20201130134442-10cb98267c6c",
+                           "name":  "gopkg.in/check.v1",
+                           "version":  "v1.0.0-20201130134442-10cb98267c6c",
+                           "type":  "library"
+                       },
+                       {
+                           "purl":  "pkg:golang/gopkg.in/yaml.v3@v3.0.1",
+                           "name":  "gopkg.in/yaml.v3",
+                           "version":  "v3.0.1",
+                           "type":  "library"
+                       }
+                   ],
+    "specVersion":  "1.5",
+    "version":  1,
+    "metadata":  {
+                     "component":  {
+                                       "supplier":  {
+                                                        "name":  "AxisRobo"
+                                                    },
+                                       "name":  "orchadyn-core",
+                                       "version":  "v1.41.0",
+                                       "type":  "application"
+                                   }
+                 }
+}
