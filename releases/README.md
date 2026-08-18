@@ -1,8 +1,9 @@
 # Release Manifests
 
 Published binary releases include checksums, the originating Core version, and
-all applicable license notices. Since v1.55.0 the release SBOM and each
-platform's `SHA256SUMS` are signed with the ORCHADYN release signing key.
+all applicable license notices. Every release's `SHA256SUMS` files are signed
+with the ORCHADYN release signing key; since v0.5.0 the release SBOM is signed
+alongside them.
 
 ## Signature Verification
 
