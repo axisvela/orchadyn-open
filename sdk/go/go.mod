@@ -1,3 +1,3 @@
-module github.com/axisrobo/orchadyn-open/sdk/go
+module github.com/axisvela/orchadyn-open/sdk/go
 
 go 1.25.0

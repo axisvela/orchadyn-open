@@ -5,7 +5,7 @@ Run the ORCHADYN Planning API service with PostgreSQL 18.
 ## Prerequisites
 
 - Go 1.25.12+ (for the Core source) or a published `orchadyn-api` binary from
-  the [release artifacts](https://github.com/axisrobo/orchadyn-open/releases).
+  the [release artifacts](https://github.com/axisvela/orchadyn-open/releases).
 - PostgreSQL 18.
 
 ## Database

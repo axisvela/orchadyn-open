@@ -1,6 +1,6 @@
 ORCHADYN Core Binary Release v0.2.0
 
-Source: https://github.com/axisrobo/ORCHADYN commit 8487670.
+Source: https://github.com/axisvela/ORCHADYN commit 8487670.
 
 Artifacts:
   - orchadyn-api.exe: ORCHADYN Planning API service (HTTP).

@@ -10,7 +10,7 @@ import (
 	"context"
 	"fmt"
 
-	orchadyn "github.com/axisrobo/orchadyn-open/sdk/go"
+	orchadyn "github.com/axisvela/orchadyn-open/sdk/go"
 )
 ```
 

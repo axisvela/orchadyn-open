@@ -36,7 +36,7 @@ completion, and why other planning alternatives were rejected.
 
 This repository contains Apache-2.0 licensed documentation, SDKs, examples,
 public API definitions, and binary release manifests. The AGPL planning kernel
-is maintained in [ORCHADYN](https://github.com/axisrobo/ORCHADYN).
+is maintained in [ORCHADYN](https://github.com/axisvela/ORCHADYN).
 
 Start with the [quickstart](docs/quickstart.md), the versioned
 [OpenAPI contract](api/openapi.yaml), or the dependency-free
@@ -55,7 +55,7 @@ Start with the [quickstart](docs/quickstart.md), the versioned
 Open artifacts use only published ORCHADYN contracts. Examples must not import
 Core internals or copy Core source. Enterprise capabilities are documented only
 through their public compatibility contracts; their implementation is in
-[ORCHADYN-ee](https://github.com/axisrobo/ORCHADYN-ee).
+[ORCHADYN-ee](https://github.com/axisvela/ORCHADYN-ee).
 
 ## License
 
