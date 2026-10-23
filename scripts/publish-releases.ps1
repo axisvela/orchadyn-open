@@ -2,7 +2,7 @@
 param(
     [string]$From = "v1.23.0",
     [string]$To = "v1.57.0",
-    [string]$Repo = "axisrobo/ORCHADYN-open",
+    [string]$Repo = "axisvela/ORCHADYN-open",
     [switch]$DryRun
 )
 
