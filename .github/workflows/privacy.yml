@@ -1,0 +1,29 @@
+name: privacy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  privacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Require privacy secret
+        env:
+          PRAXO_DISALLOWED_EMAIL_DOMAINS: ${{ secrets.PRAXO_DISALLOWED_EMAIL_DOMAINS }}
+        run: |
+          if [ -z "${PRAXO_DISALLOWED_EMAIL_DOMAINS:-}" ]; then
+            echo "::error::PRAXO_DISALLOWED_EMAIL_DOMAINS is not configured"
+            exit 1
+          fi
+      - name: Audit email domains
+        env:
+          PRAXO_DISALLOWED_EMAIL_DOMAINS: ${{ secrets.PRAXO_DISALLOWED_EMAIL_DOMAINS }}
+        run: python3 .github/scripts/privacy_check.py
