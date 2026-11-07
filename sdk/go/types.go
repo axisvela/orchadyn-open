@@ -65,6 +65,29 @@ type OperationalState struct {
 	Available    bool   `json:"available"`
 }
 
+// SubPlanRef points a plan node at a separately persisted child plan that is
+// materialized as a nested workflow.
+type SubPlanRef struct {
+	PlanID string            `json:"planId"`
+	Digest string            `json:"digest,omitempty"`
+	Inputs map[string]string `json:"inputs,omitempty"`
+}
+
+// PlanNode is one plan node. A node is either capability-backed or a reference
+// to a nested plan (SubPlan), matching OPIR v2.
+type PlanNode struct {
+	ID                string              `json:"id"`
+	GoalID            string              `json:"goalId"`
+	RequirementID     string              `json:"requirementId"`
+	CapabilityID      string              `json:"capabilityId,omitempty"`
+	CapabilityVersion string              `json:"capabilityVersion,omitempty"`
+	ExpectedEffect    string              `json:"expectedEffect,omitempty"`
+	Compliance        []string            `json:"compliance,omitempty"`
+	Dependencies      []string            `json:"dependencies,omitempty"`
+	Delegation        *DelegationContract `json:"delegation,omitempty"`
+	SubPlan           *SubPlanRef         `json:"subPlan,omitempty"`
+}
+
 // GovernedPlanningInput omits caller-supplied catalog and grants because the service resolves them from control planes.
 type GovernedPlanningInput struct {
 	Tenant       string                        `json:"tenant"`

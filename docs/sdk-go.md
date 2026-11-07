@@ -62,6 +62,32 @@ if err := client.Verify(ctx, orchadyn.VerificationRequest{Plan: generated, Reque
 // evidence["attestations"] binds the plan and input digests.
 ```
 
+## Nested plans
+
+OPIR v2 lets a node reference a separately persisted child plan instead of a
+capability. `PlanNode` and `SubPlanRef` mirror that shape:
+
+```go
+plan := orchadyn.PlanNode{
+	ID:            "n1",
+	GoalID:        "g1",
+	RequirementID: "r1",
+	SubPlan: &orchadyn.SubPlanRef{
+		PlanID: "child-plan-id",
+		Digest: "optional-pinned-digest",
+		Inputs: map[string]string{"region": "${region}"},
+	},
+}
+
+var raw map[string]any
+if err := client.GetPlan(ctx, plan.SubPlan.PlanID, &raw); err != nil {
+	return err
+}
+```
+
+Capability nodes leave `SubPlan` nil and set `CapabilityID`,
+`CapabilityVersion`, and `ExpectedEffect`.
+
 ## Lifecycle and execution tracking
 
 ```go
