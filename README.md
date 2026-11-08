@@ -14,6 +14,16 @@ robot missions, and other execution systems are compilation targets. ORCHADYN
 does not execute the work itself, own the capability registry, or replace
 identity and operational-state authorities.
 
+## Edge and Learning Boundary
+
+ORCHADYN retains business-plan decomposition, delegation strategy and revision.
+Robot-local navigation and behavior trees are execution mechanisms, not business
+planner authority. A plan candidate is distinct from a DIDACTOVELA learned-model
+candidate; neither authorizes execution or deployment. AKROVELA local operations
+do not replace KINETOVELA Missions or RHEOVELA Processes. Both new products are
+unreleased `0.1.0` bootstraps, with no functional integration. See the
+[family architecture and boundaries](https://github.com/axisvela/axisvela/blob/main/EDGE-AND-LEARNING-ARCHITECTURE.md).
+
 ## Problems It Solves
 
 Enterprise automation usually begins at the execution layer: agents, tools,
